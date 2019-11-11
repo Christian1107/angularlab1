@@ -1,0 +1,19 @@
+<div [className]="'white-box'">
+  <h3 [ngClass]="{ h3Style: title }">{{ title }}</h3>
+  <p [ngClass]="{ paraStyle: paragraph }">{{ paragraph }}</p>
+  <input [className]="'inputStyle'" />
+  <ol>
+    <li
+      [ngClass]="{ completed: todo.completed }"
+      *ngFor="let todo of todoObjects"
+    >
+      <button *ngIf="todo.completed === false" [className]="'btnStyle'">
+        Complete</button
+      >{{ todo.task }}<button [ngClass]="'btn2Style'">X</button>
+    </li>
+  </ol>
+  <input [className]="'inputStyle'" />
+  <button [className]="'btn3Style'">
+    Add
+  </button>
+</div>
